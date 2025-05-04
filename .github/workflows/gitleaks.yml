@@ -1,0 +1,12 @@
+name: Gitleaks Secret Scan
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  gitleaks:
+    uses: asksyntheia/actions/.github/workflows/reuseable-gitleaks.yaml@main
+    secrets: inherit
